@@ -1,13 +1,16 @@
 'use client'
 
+import { useState } from 'react'
+
 import Image from 'next/image'
 
-import { Box, Link, Stack } from '@mui/material'
+import { Box, Button, Link, Stack } from '@mui/material'
 
 import { Syne } from 'next/font/google'
 
-import { usePathname } from 'next/navigation'
-import { useState } from 'react'
+import { Iconify } from '@/components'
+
+import { LogoSVG } from './LogoSVG'
 
 const syne = Syne({ subsets: ['latin'] })
 
@@ -46,12 +49,7 @@ export const Header = () => {
       }}
     >
       <Stack direction="row" justifyContent="space-between" alignItems="center" spacing={2}>
-        <Image
-          src="https://upload.wikimedia.org/wikipedia/commons/d/d2/Ems-sem-fundo-logo.png"
-          alt="image"
-          width={80}
-          height={80}
-        />
+        <LogoSVG width={80} height={80} />
 
         <Box
           component="ul"
@@ -60,15 +58,7 @@ export const Header = () => {
             display: 'flex',
             gap: '3rem',
             '& li': {
-              listStyleType: 'none',
-              fontWeight: 'bold',
-              fontSize: '1.2rem',
-              fontStyle: 'italic',
-              '& a': {
-                '&:hover': {
-                  color: 'blue'
-                }
-              }
+              listStyleType: 'none'
             }
           }}
         >
@@ -85,9 +75,23 @@ export const Header = () => {
           })}
         </Box>
 
-        <a href="#" className="button">
-          Contact
-        </a>
+        <Button
+          variant="contained"
+          color="primary"
+          endIcon={<Iconify icon="line-md:arrow-small-right" />}
+          onClick={() => alert('Conheça a Horvatti')}
+          sx={{
+            backgroundColor: 'black',
+            borderRadius: 5,
+            color: 'white',
+            '&:hover': {
+              boxShadow: '0 0 10px 5px rgba(0, 0, 0, 0.2)',
+              backgroundColor: 'black'
+            }
+          }}
+        >
+          Conheça a Horvatti
+        </Button>
       </Stack>
     </header>
   )

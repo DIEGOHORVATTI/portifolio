@@ -9,7 +9,7 @@ export const Home = () => {
     <>
       <Header />
 
-      <main>
+      {/*  <main>
         <div className="left-content">
           <h2>
             Using CSS <span>scroll animations</span> to detect visibility changes
@@ -63,7 +63,7 @@ export const Home = () => {
             ” for an explanation of s happening here.
           </p>
         </div>
-      </main>
+      </main> */}
 
       <div className="container" />
       {/* <main>
