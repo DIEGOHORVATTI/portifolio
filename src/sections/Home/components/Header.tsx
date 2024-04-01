@@ -45,14 +45,14 @@ export const Header = () => {
   return (
     <header
       style={{
-        padding: '0.5rem 2rem',
+        zIndex: 2,
         position: 'sticky',
+        padding: '0.5rem 2rem',
         backdropFilter: 'blur(10px)',
-        boxShadow: '0 0 10px 5px rgba(0, 0, 0, 0.2)',
+        background: 'rgba(0, 0, 0, 0.5)',
         margin: 8,
         top: 5,
-        borderRadius: 5,
-        backgroundColor: '#000000bf'
+        borderRadius: 10
       }}
     >
       <Stack direction="row" justifyContent="space-between" alignItems="center" spacing={2}>
@@ -65,7 +65,11 @@ export const Header = () => {
             display: 'flex',
             gap: '3rem',
             '& li': {
-              listStyleType: 'none'
+              listStyleType: 'none',
+              cursor: 'pointer',
+              '&:hover': {
+                color: 'cyan'
+              }
             }
           }}
         >
@@ -74,7 +78,7 @@ export const Header = () => {
 
             return (
               <li key={index} onClick={() => setPathname(hashActual)}>
-                <Link href={href} underline="none" color={pathname === hashActual ? 'blue' : 'white'}>
+                <Link href={href} underline="none" color={pathname === hashActual ? 'cyan' : 'white'}>
                   {label}
                 </Link>
               </li>

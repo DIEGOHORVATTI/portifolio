@@ -1,32 +1,46 @@
-import { Box, Divider, Stack, Typography } from '@mui/material'
+import { Box, Divider, Grid, Stack, Typography } from '@mui/material'
 
 import { Iconify } from '@/components'
 
 export const Home = () => {
   return (
-    <Box id="kapa" sx={{ position: 'relative' }}>
-      <Box id="kapaFIlho">
-        <Typography component="h1" variant="h1">
-          Especialistas em design e tecnologia
-        </Typography>
+    <Box id="kapa">
+      <Box sx={{ margin: '8%' }}>
+        <Typography variant="h1">Especialistas em design e tecnologia</Typography>
 
-        <Stack direction="row" justifyContent="space-between" alignItems="center" spacing={2} width="max-content">
-          <Typography variant="body2">DESIGN & CODE & BUSINESS</Typography>
+        <Grid
+          py="6rem"
+          container
+          direction="row"
+          justifyContent="space-between"
+          alignItems="center"
+          spacing={2}
+          width="100%"
+        >
+          <Grid item xs={12} sm={4}>
+            <Stack direction="row" justifyContent="space-between" alignItems="center" spacing={2} width="max-content">
+              <Typography variant="body2">DESIGN & CODE & BUSINESS</Typography>
 
-          <Stack direction="row" justifyContent="space-between" alignItems="center" spacing={2}>
-            <Iconify icon="mdi:code-braces" />
-            <Iconify icon="mdi:language-javascript" />
-            <Iconify icon="mdi:rocket" />
-          </Stack>
-        </Stack>
+              <Stack direction="row" justifyContent="space-between" alignItems="center" spacing={2}>
+                <Iconify icon="mdi:code-braces" />
+                <Iconify icon="mdi:language-javascript" />
+                <Iconify icon="mdi:rocket" />
+              </Stack>
+            </Stack>
+          </Grid>
 
-        <Typography variant="h2">
-          Desenvolvimento de branding, sistemas, plataformas, aplicativos e muito mais
-        </Typography>
+          <Grid item xs={12} sm={8}>
+            <Stack direction="column" spacing={2}>
+              <Typography variant="h4">
+                Desenvolvimento de Branding, Dashboard, Automoções, Aplicativos e muito mais
+              </Typography>
 
-        <Typography variant="body1">
-          Ajudamos empresas a criar produtos digitais incríveis, escaláveis e sustentáveis.
-        </Typography>
+              <Typography variant="h6">
+                Ajudamos empresas a criar produtos digitais incríveis, escaláveis e sustentáveis.
+              </Typography>
+            </Stack>
+          </Grid>
+        </Grid>
 
         <Box
           component="section"
@@ -34,7 +48,6 @@ export const Home = () => {
             width: '100%',
             justifyContent: 'space-between',
             alignItems: 'center',
-            position: 'absolute',
             px: 2,
             bottom: 5,
             left: 5
