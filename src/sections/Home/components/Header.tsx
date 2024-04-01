@@ -45,11 +45,18 @@ export const Header = () => {
   return (
     <header
       style={{
-        padding: '2rem 4rem'
+        padding: '0.5rem 2rem',
+        position: 'sticky',
+        backdropFilter: 'blur(10px)',
+        boxShadow: '0 0 10px 5px rgba(0, 0, 0, 0.2)',
+        margin: 8,
+        top: 5,
+        borderRadius: 5,
+        backgroundColor: '#000000bf'
       }}
     >
       <Stack direction="row" justifyContent="space-between" alignItems="center" spacing={2}>
-        <LogoSVG width={80} height={80} />
+        <LogoSVG width={50} height={50} />
 
         <Box
           component="ul"
