@@ -1,188 +1,64 @@
-import Image from 'next/image'
+import { Box, Divider, Stack, Typography } from '@mui/material'
 
-import { Box, Link, Stack } from '@mui/material'
-
-import { Header } from './components/Header'
+import { Iconify } from '@/components'
 
 export const Home = () => {
   return (
-    <>
-      <main style={{ position: 'relative' }}>
-        <div style={{ zIndex: 9999 }}>
-          <div className="left-content">
-            <h2>
-              Using CSS <span>scroll animations</span> to detect visibility changes
-            </h2>
-          </div>
+    <Box id="kapa" sx={{ position: 'relative' }}>
+      <Box id="kapaFIlho">
+        <Typography component="h1" variant="h1">
+          Especialistas em design e tecnologia
+        </Typography>
 
-          <div className="right-content">
-            <p>Resize the window to see the layout change automatically without media queries or JavaScript.</p>
+        <Stack direction="row" justifyContent="space-between" alignItems="center" spacing={2} width="max-content">
+          <Typography variant="body2">DESIGN & CODE & BUSINESS</Typography>
 
-            <p>
-              See “
-              <a href="https://cdpn.io/pen/debug/gOEQmVW/#tracking" target="_top">
-                Content-aware collapsing menu using CSS scroll animations
-              </a>
-              ” for an explanation of s happening here.
-            </p>
-          </div>
+          <Stack direction="row" justifyContent="space-between" alignItems="center" spacing={2}>
+            <Iconify icon="mdi:code-braces" />
+            <Iconify icon="mdi:language-javascript" />
+            <Iconify icon="mdi:rocket" />
+          </Stack>
+        </Stack>
 
-          <div className="left-content">
-            <h2>
-              Using CSS <span>scroll animations</span> to detect visibility changes
-            </h2>
-          </div>
+        <Typography variant="h2">
+          Desenvolvimento de branding, sistemas, plataformas, aplicativos e muito mais
+        </Typography>
 
-          <div className="right-content">
-            <p>Resize the window to see the layout change automatically without media queries or JavaScript.</p>
+        <Typography variant="body1">
+          Ajudamos empresas a criar produtos digitais incríveis, escaláveis e sustentáveis.
+        </Typography>
 
-            <p>
-              See “
-              <a href="https://cdpn.io/pen/debug/gOEQmVW/#tracking" target="_top">
-                Content-aware collapsing menu using CSS scroll animations
-              </a>
-              ” for an explanation of s happening here.
-            </p>
-          </div>
+        <Box
+          component="section"
+          sx={{
+            width: '100%',
+            justifyContent: 'space-between',
+            alignItems: 'center',
+            position: 'absolute',
+            px: 2,
+            bottom: 5,
+            left: 5
+          }}
+        >
+          <Divider variant="fullWidth" color="white" />
 
-          <div className="left-content">
-            <h2>
-              Using CSS <span>scroll animations</span> to detect visibility changes
-            </h2>
-          </div>
+          <Stack direction="row" justifyContent="space-between" alignItems="center" spacing={2} p={2}>
+            <Stack direction="row" justifyContent="space-between" alignItems="center" spacing={2} width="max-content">
+              <Iconify icon="solar:mouse-minimalistic-linear" />
 
-          <div className="right-content">
-            <p>Resize the window to see the layout change automatically without media queries or JavaScript.</p>
+              <Typography component="p">Continue explorando</Typography>
+            </Stack>
 
-            <p>
-              See “
-              <a href="https://cdpn.io/pen/debug/gOEQmVW/#tracking" target="_top">
-                Content-aware collapsing menu using CSS scroll animations
-              </a>
-              ” for an explanation of s happening here.
-            </p>
-          </div>
-        </div>
-      </main>
+            <Stack direction="row" justifyContent="space-between" alignItems="center" spacing={2} width="max-content">
+              <Iconify icon="mdi:instagram" />
 
-      <Header />
+              <Iconify icon="mdi:linkedin" />
 
-      <>
-        <div className="left-content">
-          <h2>
-            Using CSS <span>scroll animations</span> to detect visibility changes
-          </h2>
-        </div>
-
-        <div className="right-content">
-          <p>Resize the window to see the layout change automatically without media queries or JavaScript.</p>
-
-          <p>
-            See “
-            <a href="https://cdpn.io/pen/debug/gOEQmVW/#tracking" target="_top">
-              Content-aware collapsing menu using CSS scroll animations
-            </a>
-            ” for an explanation of s happening here.
-          </p>
-        </div>
-
-        <div className="left-content">
-          <h2>
-            Using CSS <span>scroll animations</span> to detect visibility changes
-          </h2>
-        </div>
-
-        <div className="right-content">
-          <p>Resize the window to see the layout change automatically without media queries or JavaScript.</p>
-
-          <p>
-            See “
-            <a href="https://cdpn.io/pen/debug/gOEQmVW/#tracking" target="_top">
-              Content-aware collapsing menu using CSS scroll animations
-            </a>
-            ” for an explanation of s happening here.
-          </p>
-        </div>
-
-        <div className="left-content">
-          <h2>
-            Using CSS <span>scroll animations</span> to detect visibility changes
-          </h2>
-        </div>
-
-        <div className="right-content">
-          <p>Resize the window to see the layout change automatically without media queries or JavaScript.</p>
-
-          <p>
-            See “
-            <a href="https://cdpn.io/pen/debug/gOEQmVW/#tracking" target="_top">
-              Content-aware collapsing menu using CSS scroll animations
-            </a>
-            ” for an explanation of s happening here.
-          </p>
-        </div>
-      </>
-
-      <>
-        <div className="left-content">
-          <h2>
-            Using CSS <span>scroll animations</span> to detect visibility changes
-          </h2>
-        </div>
-
-        <div className="right-content">
-          <p>Resize the window to see the layout change automatically without media queries or JavaScript.</p>
-
-          <p>
-            See “
-            <a href="https://cdpn.io/pen/debug/gOEQmVW/#tracking" target="_top">
-              Content-aware collapsing menu using CSS scroll animations
-            </a>
-            ” for an explanation of s happening here.
-          </p>
-        </div>
-
-        <div className="left-content">
-          <h2>
-            Using CSS <span>scroll animations</span> to detect visibility changes
-          </h2>
-        </div>
-
-        <div className="right-content">
-          <p>Resize the window to see the layout change automatically without media queries or JavaScript.</p>
-
-          <p>
-            See “
-            <a href="https://cdpn.io/pen/debug/gOEQmVW/#tracking" target="_top">
-              Content-aware collapsing menu using CSS scroll animations
-            </a>
-            ” for an explanation of s happening here.
-          </p>
-        </div>
-
-        <div className="left-content">
-          <h2>
-            Using CSS <span>scroll animations</span> to detect visibility changes
-          </h2>
-        </div>
-
-        <div className="right-content">
-          <p>Resize the window to see the layout change automatically without media queries or JavaScript.</p>
-
-          <p>
-            See “
-            <a href="https://cdpn.io/pen/debug/gOEQmVW/#tracking" target="_top">
-              Content-aware collapsing menu using CSS scroll animations
-            </a>
-            ” for an explanation of s happening here.
-          </p>
-        </div>
-      </>
-
-      {/* <main>
-      <Header />
-
-    </main> */}
-    </>
+              <Iconify icon="mdi:medium" />
+            </Stack>
+          </Stack>
+        </Box>
+      </Box>
+    </Box>
   )
 }

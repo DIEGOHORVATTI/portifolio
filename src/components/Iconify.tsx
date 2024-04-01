@@ -1,10 +1,8 @@
+'use client'
+
 import { Icon, IconifyIcon, iconExists } from '@iconify/react'
 
-import { BoxProps } from '@mui/system'
-
-import { Box } from '@mui/material'
-
-import { StackProps } from '@mui/material'
+import { Box, StackProps, BoxProps } from '@mui/material'
 
 type Props = BoxProps &
   Pick<StackProps, 'color'> & {

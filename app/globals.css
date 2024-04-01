@@ -8,13 +8,6 @@
   --color-background-secondary: #252525;
 }
 
-*,
-*::before,
-*::after {
-  background-repeat: no-repeat;
-  box-sizing: border-box;
-}
-
 ::-webkit-scrollbar {
   width: 5px;
 }
@@ -25,24 +18,34 @@
   background: var(--color-background);
 }
 
-html {
-  font-size: 16px;
-  scroll-behavior: smooth;
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html,
+body {
+  max-width: 100vw;
+  overflow-x: hidden;
 }
 
 body {
-  background: var(--color-background);
-  font-family: Inter, Roboto, 'Helvetica Neue', 'Arial Nova', 'Nimbus Sans', Arial, sans-serif;
   color: var(--color-text);
-  margin: 0;
-  padding: 0;
-  position: relative;
+  background: var(--color-background);
 }
 
-main {
+#kapaFIlho {
+  margin-left: 10%;
+  margin-right: 10%;
+}
+
+#kapa {
   margin: 0;
   padding: 0;
   height: 90vh;
+
+  display: flex;
   background: linear-gradient(
     132deg,
     var(--color-background) 0%,
